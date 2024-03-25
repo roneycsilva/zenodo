@@ -1,38 +1,46 @@
-Integração do Banco de Dados MySQL e linguagem Python
+## **Integração do Banco de Dados MySQL e linguagem Python.** ##
 >Pesquisa
 
-Um banco de dados é uma coleção organizada de dados estruturados que são armazenados eletronicamente em um sistema de computador. Ele é projetado para permitir o armazenamento, recuperação, manipulação e gerenciamento eficiente desses dados, permitindo que usuários e aplicativos acessem e trabalhem com as informações de forma fácil e rápida.
-
-Os principais recursos de um banco de dados incluem:
-
-1.	Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.
-2.	Recuperação de Dados: Capacidade de recuperar dados de forma eficiente por meio de consultas, permitindo que os usuários obtenham informações específicas conforme necessário.
-3.	Gerenciamento de Transações**: Suporte para transações que garantem a integridade e consistência dos dados, permitindo operações como inserção, atualização e exclusão de registros.
-4.	Concorrência: Habilidade de lidar com múltiplos usuários acessando e manipulando os dados simultaneamente de forma segura e eficiente.
-5.	Controle de Acesso: Implementação de mecanismos de segurança para controlar o acesso aos dados, garantindo que apenas usuários autorizados possam visualizar e modificar informações sensíveis.
-6.	Backup e Recuperação: Capacidade de realizar backups regulares dos dados armazenados e restaurá-los em caso de falhas no sistema ou perda de dados.
-7.	Integridade Referencial: Suporte para garantir a integridade referencial entre diferentes conjuntos de dados por meio de chaves estrangeiras e restrições de integridade.
-8.	Indexação e Otimização: Uso de índices para acelerar a recuperação de dados e otimizar o desempenho das consultas, especialmente em grandes conjuntos de dados.
-9.	Suporte a Transações ACID: Implementação dos princípios ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir que as transações sejam executadas de forma confiável e segura.
-10.	Escalabilidade: Capacidade de expandir o banco de dados conforme necessário para lidar com um aumento na quantidade de dados ou na carga de trabalho, sem comprometer o desempenho ou a disponibilidade.
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+<p> 
+  Um banco de dados é uma coleção organizada de dados estruturados que são armazenados eletronicamente em um sistema de computador. Ele é projetado para permitir o armazenamento, recuperação, manipulação e gerenciamento eficiente desses dados, permitindo que usuários e aplicativos acessem e trabalhem com as informações de forma fácil e rápida.
+<p></p>
+	
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+<p> 
+ 1. Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.
+2. Recuperação de Dados: Capacidade de recuperar dados de forma eficiente por meio de consultas, permitindo que os usuários obtenham informações específicas conforme necessário.
+3. Gerenciamento de Transações**: Suporte para transações que garantem a integridade e consistência dos dados, permitindo operações como inserção, atualização e exclusão de registros.
+4. Concorrência: Habilidade de lidar com múltiplos usuários acessando e manipulando os dados simultaneamente de forma segura e eficiente.
+5. Controle de Acesso: Implementação de mecanismos de segurança para controlar o acesso aos dados, garantindo que apenas usuários autorizados possam visualizar e modificar informações sensíveis.
+6. Backup e Recuperação: Capacidade de realizar backups regulares dos dados armazenados e restaurá-los em caso de falhas no sistema ou perda de dados.
+7. Integridade Referencial: Suporte para garantir a integridade referencial entre diferentes conjuntos de dados por meio de chaves estrangeiras e restrições de integridade.
+8. Indexação e Otimização: Uso de índices para acelerar a recuperação de dados e otimizar o desempenho das consultas, especialmente em grandes conjuntos de dados.
+9. Suporte a Transações ACID: Implementação dos princípios ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir que as transações sejam executadas de forma confiável e segura.
+10. Escalabilidade: Capacidade de expandir o banco de dados conforme necessário para lidar com um aumento na quantidade de dados ou na carga de trabalho, sem comprometer o desempenho ou a disponibilidade. <p></p>
 
 Os principais recursos de um banco de dados incluem:
 
 Os bancos de dados servem vários propósitos e desempenham um papel central em muitos sistemas de informação. Aqui estão alguns dos principais objetivos de um banco de dados:
-•	Armazenamento de dados;
-•	Recuperação de dados e ciente;
-•	Integridade de dados
-•	Controle de concorrência (acesso);
-•	Segurança de dados;
-•	Redundância e backup;
-•	Entre outros.
+• Armazenamento de dados;<p></p>
+• Recuperação de dados e ciente;<p></p>
+• Integridade de dados; <p></p>
+• Controle de concorrência (acesso);<p></p>
+• Segurança de dados;<p></p>
+• Redundância e backup;<p></p>
+• Entre outros.<p></p>
 
 Esses são os principais recursos essenciais de um banco de dados moderno, que garantem eficiência, segurança e confiabilidade no armazenamento e gerenciamento de dados.
+<p></p>
 
-MYSQL
+
+## **MYSQL** ##
 >História 	
 
-O MySQL é um sistema de gerenciamento de banco de dados relacional (SGBDR) que teve sua origem em meados da década de 1990. Sua história remonta a uma empresa sueca chamada MySQL AB, fundada em 1995 por David Axmark, Allan Larsson e Michael "Monty" Widenius. O nome "MySQL" é derivado do nome de Monty, filho de Michael Widenius.
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+<p> 
+ O MySQL é um sistema de gerenciamento de banco de dados relacional (SGBDR) que teve sua origem em meados da década de 1990. Sua história remonta a uma empresa sueca chamada MySQL AB, fundada em 1995 por David Axmark, Allan Larsson e Michael "Monty" Widenius. O nome "MySQL" é derivado do nome de Monty, filho de Michael Widenius.
 
 O desenvolvimento inicial do MySQL foi impulsionado pela necessidade de um banco de dados leve, rápido e acessível para uso em aplicativos web. Inicialmente, o MySQL foi desenvolvido como um projeto de código aberto, tornando-se uma escolha popular entre desenvolvedores e empresas devido à sua simplicidade, desempenho e custo zero.
 
@@ -43,8 +51,10 @@ Em 2008, a MySQL AB foi adquirida pela Sun Microsystems por cerca de US$ 1 bilh�
 Apesar das preocupações iniciais, o MySQL continuou sendo desenvolvido ativamente como um projeto de código aberto. A Oracle Corporation oferece várias edições comerciais do MySQL, juntamente com suporte e serviços adicionais. Além disso, a comunidade de código aberto em torno do MySQL permanece vibrante, contribuindo para o seu desenvolvimento contínuo.
 
 Ao longo dos anos, o MySQL passou por várias versões e atualizações, introduzindo novos recursos, melhorias de desempenho e suporte a padrões emergentes. Em 2021, a versão mais recente do MySQL é a MySQL 8.0, que continua a ser uma escolha popular para muitos desenvolvedores e organizações em todo o mundo.
+<p></p>
 
-Instalação MySQL
+
+## **Instalação MySQL** ##
 >MySQL
 
 A Linguagem de Consulta Estruturada (Structured Query Language), ou SQL, conhecida no mercado como linguagem de consulta, é usada para manipular bancos de dados relacionais, como MySQL, SQL Server, Oracle, entre outros. O SQL não se limita apenas a consultas; também inclui recursos para definir a estrutura de dados, modificar dados e especificar restrições de segurança.
