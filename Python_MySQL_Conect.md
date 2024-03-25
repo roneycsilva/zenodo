@@ -1,9 +1,10 @@
 ## **CONEXÃO PYTHON COM BANCO DE DADOS MYSQL** ##
 
 **Palavra-chave**: Banco de dados, MySQL, Python, Integração<p></p>
-**Altores**
+
+**Altores**<p></p>
 Marcelo Andrade Bortolotto.<p></p>
-Roney Cesar Alves da Silva.<p></p>
+Roney Cesar Alves da Silva.
 
 **Categoria de Trabalho**<p></p>
 Pesquisa
