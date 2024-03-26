@@ -127,19 +127,15 @@ Para começarmos a trabalhar, vamos nos conectar a nossa DataBase usando a ferra
 
 **Linguagem de Definição de Dados (DDL)**<p></p>
  
-
-
- ```
-parei aqui arquivo wor página 07
-```
-
-
-
-Ao criamos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) chave(s) primaria(s) e estrangeiras, índices, regras e etc.
-Para isso a criação e alteração de estruturas que definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos falando de comandos do tipo CREATE, ALTER e DROP (criar, alterar e excluir, respectivamente).
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Ao criarmos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) <strong><em>chave</em></strong> (s) <strong><em>primária</em></strong> (s) e <strong><em>estrangeiras</em></strong>, <strong><em>índices</em></strong>, <strong><em>regras</em></strong> e etc.
+Para isso, a criação e alteração de estruturas definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos nos referindo a comandos do tipo <strong><em>CREATE</em></strong>, <strong><em>ALTER</em></strong> e <strong><em>DROP</em></strong> (criar, alterar e excluir, respectivamente). <p></p>
+</div>
 
 Para criar o banco de dados DBDevMedia utilizaremos a sintaxe CREATE, conforme o código a seguir:
+```c
 1| CREATE DATABASE DBDevMedia;
+```
 Ao executá-lo teremos o mesmo resultado da Figura 8.
  
 Figura 8Figura 8. Criando o banco de dados.
