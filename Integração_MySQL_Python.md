@@ -136,20 +136,47 @@ Para criar o banco de dados DBDevMedia utilizaremos a sintaxe CREATE, conforme o
 ```c
 1| CREATE DATABASE DBDevMedia;
 ```
-Ao executá-lo teremos o mesmo resultado da Figura 8.
- 
-Figura 8Figura 8. Criando o banco de dados.
+> Ao executá-lo teremos o mesmo resultado da Figura 8.
 
-Podemos complementar o nosso código com a sintaxe opcional IF NOT EXISTS, que permite ao MySQL verificar se o nome escolhido esteja sendo utilizando no servidor, evitando que retorne um erro com a possível existência de dois bancos com o mesmo nome em um mesmo servidor MySQL:
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/b2429f78-7a3b-471c-a665-2817c513827f" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 8. Criando o banco de dados.</p>
+<p align="center">
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Ao criarmos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) <strong><em>chave</em></strong> (s) <strong><em>primária</em></strong> (s) e <strong><em>estrangeiras</em></strong>, <strong><em>índices</em></strong>, <strong><em>regras</em></strong> e etc.
+Para isso, a criação e alteração de estruturas definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos nos referindo a comandos do tipo <strong><em>CREATE</em></strong>, <strong><em>ALTER</em></strong> e <strong><em>DROP</em></strong> (criar, alterar e excluir, respectivamente). <p></p>
+</div>
+
+
+Podemos complementar o nosso código com a sintaxe opcional <strong><em>IF NOT EXISTS</em></strong>, que permite ao  <strong><em>MySQL</em></strong>verificar <strong><em>se o nome escolhido esteja sendo utilizando no servidor</em></strong>, evitando que retorne um erro com a possível existência de dois bancos com o mesmo nome em um mesmo <strong><em>servidor MySQL:</em></strong>
+```C
 1| CREATE DATABASE IF NOT EXISTS DBDevMedia;
-
+```
 Para visualizar uma lista com todos os bancos de dados existentes no servidor, use o comando:
+```C
 SHOW DATABASES;
-Observe que todos os comandos em MySQL sempre termina com “;” no final. Essa sintaxe é obrigatória para que o MySQL possa entender o termino do comando.
-Para remover os bancos de dados existentes no servidor, utilize o comando a seguir, mas atenção, pois uma vez executado, a ação é irreversível (Figura 9):
+```
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Observe que todos os <strong><em>comandos em MySQL</em></strong> sempre termina com “;” no final. Essa sintaxe é obrigatória para que o MySQL possa entender o termino do comando.
+Para remover os bancos de dados existentes no servidor, utilize o comando a seguir, mas atenção, pois uma vez executado, a ação é irreversível (Figura 9): <p></p>
+</div>
+
+```c
 DROP DATABASE DBDevMedia;
- Figura 9. Removendo o banco de dados.
-Criando tabelas no MySQL
+```
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/072236f4-5ca8-4d3b-9b55-f3033f7ffa1c" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 9. Removendo o banco de dados.</p>
+
+**Criando tabelas no MySQL**
+
+###parei aqui - pag: 08 ###
+
 Dada a grande quantidade de parâmetros aceitos, a declaração CREATE TABLE é uma das mais complexas no MySQL.
 Vamos começar selecionando o banco de dados que ganhará a nova tabela usando a sintaxe:
 USE DBDevMedia;
