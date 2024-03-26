@@ -8,15 +8,15 @@
 	
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
 <p> 
- 1. Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.
-2. Recuperação de Dados: Capacidade de recuperar dados de forma eficiente por meio de consultas, permitindo que os usuários obtenham informações específicas conforme necessário.
-3. Gerenciamento de Transações**: Suporte para transações que garantem a integridade e consistência dos dados, permitindo operações como inserção, atualização e exclusão de registros.
-4. Concorrência: Habilidade de lidar com múltiplos usuários acessando e manipulando os dados simultaneamente de forma segura e eficiente.
-5. Controle de Acesso: Implementação de mecanismos de segurança para controlar o acesso aos dados, garantindo que apenas usuários autorizados possam visualizar e modificar informações sensíveis.
-6. Backup e Recuperação: Capacidade de realizar backups regulares dos dados armazenados e restaurá-los em caso de falhas no sistema ou perda de dados.
-7. Integridade Referencial: Suporte para garantir a integridade referencial entre diferentes conjuntos de dados por meio de chaves estrangeiras e restrições de integridade.
-8. Indexação e Otimização: Uso de índices para acelerar a recuperação de dados e otimizar o desempenho das consultas, especialmente em grandes conjuntos de dados.
-9. Suporte a Transações ACID: Implementação dos princípios ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir que as transações sejam executadas de forma confiável e segura.
+ 1. Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.<p></p>
+2. Recuperação de Dados: Capacidade de recuperar dados de forma eficiente por meio de consultas, permitindo que os usuários obtenham informações específicas conforme necessário.<p></p>
+3. Gerenciamento de Transações**: Suporte para transações que garantem a integridade e consistência dos dados, permitindo operações como inserção, atualização e exclusão de registros.<p></p>
+4. Concorrência: Habilidade de lidar com múltiplos usuários acessando e manipulando os dados simultaneamente de forma segura e eficiente.<p></p>
+5. Controle de Acesso: Implementação de mecanismos de segurança para controlar o acesso aos dados, garantindo que apenas usuários autorizados possam visualizar e modificar informações sensíveis.<p></p>
+6. Backup e Recuperação: Capacidade de realizar backups regulares dos dados armazenados e restaurá-los em caso de falhas no sistema ou perda de dados.<p></p>
+7. Integridade Referencial: Suporte para garantir a integridade referencial entre diferentes conjuntos de dados por meio de chaves estrangeiras e restrições de integridade.<p></p>
+8. Indexação e Otimização: Uso de índices para acelerar a recuperação de dados e otimizar o desempenho das consultas, especialmente em grandes conjuntos de dados.<p></p>
+9. Suporte a Transações ACID: Implementação dos princípios ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir que as transações sejam executadas de forma confiável e segura.<p></p>
 10. Escalabilidade: Capacidade de expandir o banco de dados conforme necessário para lidar com um aumento na quantidade de dados ou na carga de trabalho, sem comprometer o desempenho ou a disponibilidade. <p></p>
 
 Os principais recursos de um banco de dados incluem:
@@ -57,49 +57,84 @@ Ao longo dos anos, o MySQL passou por várias versões e atualizações, introdu
 ## **Instalação MySQL** ##
 >MySQL
 
-A Linguagem de Consulta Estruturada (Structured Query Language), ou SQL, conhecida no mercado como linguagem de consulta, é usada para manipular bancos de dados relacionais, como MySQL, SQL Server, Oracle, entre outros. O SQL não se limita apenas a consultas; também inclui recursos para definir a estrutura de dados, modificar dados e especificar restrições de segurança.
-
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+  A Linguagem de Consulta Estruturada (Structured Query Language), ou SQL, conhecida no mercado como linguagem de consulta, é usada para manipular bancos de dados relacionais, como MySQL, SQL Server, Oracle, entre outros. O SQL não se limita apenas a consultas; também inclui recursos para definir a estrutura de dados, modificar dados e especificar restrições de segurança.
+	
 Os recursos do SQL são divididos em cinco partes:
 
-•	DDL (Linguagem de Definição de Dados): Para definir a estrutura do banco de dados.
-•	DML (Linguagem de Manipulação de Dados): Para modificar dados no banco de dados.
-•	DQL (Linguagem de Consulta de Dados): Para consultar dados.
+• DDL (Linguagem de Definição de Dados): Para definir a estrutura do banco de dados.<p></p>
+• DML (Linguagem de Manipulação de Dados): Para modificar dados no banco de dados.<p></p>
+• DQL (Linguagem de Consulta de Dados): Para consultar dados.<p></p>
 
 Além disso, há o DCL (Linguagem de Controle de Dados) para especificar restrições de segurança e o DTL (Linguagem de Transação de Dados) para operações de transação.
+ <p></p>
 
-Instalação
+**Instalação**
 
 Para instalar o banco de dados MySQL, acesse o site oficial do MySQL e baixe o software adequado para sua arquitetura (32 ou 64 bits). Durante a instalação, escolha a opção "Developer Default"
 
- 
-Figura 1Figura 1. Opção selecionada “Developer Default” e botão “Next”.
-Após a instalação dos componentes, ao configurar o MySQL, certifique-se de marcar a opção "Enable TCP/IP Networking" e definir a porta como 3306.
+<p align="center">
+  <img width="500" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/6c15fa7c-50d2-4d1d-9611-f4d30eaa49ee" alt="Descrição da imagem">
+</p>
 
- 
-Figura 2Figura 2. Escolha das opções demarcadas e botão “Next”.
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 1. Opção selecionada "Developer Default" e botão "Next".</p>
+
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+  Após a instalação dos componentes, ao configurar o MySQL, certifique-se de marcar a opção "Enable TCP/IP Networking" e definir a porta como 3306.
+ <p></p>
+<p align="center">
+  <img width="500" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/ea8d9959-350e-46d6-92df-c757408321d7" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 2. Escolha das opções demarcadas e botão “Next”.</p>
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 Em seguida aparecerá a tela de inserção dos dados de login do usuário root, como mostra a Figura 3.
+ <p></p>
+<p align="center">
+  <img width="500" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/e443b0a1-5b28-4063-82cd-d2fe16171267" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 3. Definição de senha e botão “Next”.</p>
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Na etapa seguinte, é solicitado que você defina o nome do seu servidor. Ao prosseguir com mais alguns cliques em <strong><em>next</em></strong>, a instalação do <strong><em>MySQL</em></strong> é concluída. <p></p>
+Existem duas maneiras de utilizá-lo: através do <strong><em>MySql 5.6 Command Line Client</em></strong>, que se assemelha ao terminal do MS-DOS, ou pela ferramenta <strong><em>MySQL Workbench</em></strong>, que oferece uma interface gráfica e visual para gerenciar o <strong><em>MySQL</em></strong>. <p></p>
+</div>
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/7ebdb902-3f43-4f89-88f9-65311c44cf4b" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 4. Aparência do MySQL 5.6 Command Line Client..</p>
+<p align="center">
+  <img width="600" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/9b85fbe3-8527-412d-b354-61eae23b5f95" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 5. Aparência do MySQL 5.6 Workbench.</p>
+
+**Utilizando o MySQL Workbench**<p></p>
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para começarmos a trabalhar, vamos nos conectar a nossa DataBase usando a ferramenta gráfica. Para isso, acesse o menu “DataBase” e clique na opção “Connect to Database...”. Use as configurações padrão vistas na <strong><em>Figura 7</em></strong>.
+	<p></p>
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/d9921289-670c-41bc-84b6-ce4959cdd6bd" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 6Figura 6. Acessando o menu “Database”.</p>
+<p align="center">
+  <img width="600" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/f41c4c7e-7555-4772-87a8-31fe0bfff7da" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 7Figura 7. Configurações. </p>
+
+
+**Linguagem de Definição de Dados (DDL)**<p></p>
  
-Figura 3Figura 3. Definição de senha e botão “Next”.
 
-Na etapa seguinte, é solicitado que você defina o nome do seu servidor. Ao prosseguir com mais alguns cliques em "next", a instalação do MySQL é concluída. 
-Existem duas maneiras de utilizá-lo: através do MySql 5.6 Command Line Client, que se assemelha ao terminal do MS-DOS, ou pela ferramenta MySQL Workbench, que oferece uma interface gráfica e visual para gerenciar o MySQL.
 
- 
-Figura 4Figura 4. Aparência do MySQL 5.6 Command Line Client.
+ ```
+parei aqui arquivo wor página 07
+```
 
- 
-Figura 5Figura 5. Aparência do MySQL 5.6 Workbench.
 
-Utilizando o MySQL Workbench
-Para começarmos a trabalhar, vamos nos conectar a nossa DataBase usando a ferramenta gráfica. Para isso, acesse o menu “DataBase” e clique na opção “Connect to Database...”, como na Figura 6. Use as configurações padrão vistas na Figura 7.
 
- 
-Figura 6Figura 6. Acessando o menu “Database”.
-
- 
-Figura 7Figura 7. Configurações
-
-Linguagem de Definição de Dados (DDL)
 Ao criamos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) chave(s) primaria(s) e estrangeiras, índices, regras e etc.
 Para isso a criação e alteração de estruturas que definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos falando de comandos do tipo CREATE, ALTER e DROP (criar, alterar e excluir, respectivamente).
 
