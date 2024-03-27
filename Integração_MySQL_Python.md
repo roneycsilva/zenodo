@@ -71,7 +71,7 @@ Além disso, há o DCL (Linguagem de Controle de Dados) para especificar restri�
 
 **Instalação**
 
-Para instalar o banco de dados MySQL, acesse o site oficial do MySQL e baixe o software adequado para sua arquitetura (32 ou 64 bits). Durante a instalação, escolha a opção "Developer Default"
+Para instalar o banco de dados **MySQL**, acesse o site oficial do **MySQL** e baixe o software adequado para sua arquitetura (**32** ou **64** bits). Durante a instalação, escolha a opção "**Developer Default**"
 
 <p align="center">
   <img width="500" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/6c15fa7c-50d2-4d1d-9611-f4d30eaa49ee" alt="Descrição da imagem">
@@ -81,7 +81,7 @@ Para instalar o banco de dados MySQL, acesse o site oficial do MySQL e baixe o s
 
 
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
-  Após a instalação dos componentes, ao configurar o MySQL, certifique-se de marcar a opção "Enable TCP/IP Networking" e definir a porta como 3306.
+  Após a instalação dos componentes, ao configurar o MySQL, certifique-se de marcar a opção <strong><em>"Enable TCP/IP Networking"</em></strong>  e definir a porta como 3306.
  <p></p>
 <p align="center">
   <img width="500" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/ea8d9959-350e-46d6-92df-c757408321d7" alt="Descrição da imagem">
@@ -109,7 +109,8 @@ Existem duas maneiras de utilizá-lo: através do <strong><em>MySql 5.6 Command 
 </p>
 <p align="center" style="font-size: 18px; margin: 10px;">Figura 5. Aparência do MySQL 5.6 Workbench.</p>
 
-**Utilizando o MySQL Workbench**<p></p>
+## **Utilizando o MySQL Workbench**<p></p> ##
+>MySQL Workbench
 
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
 Para começarmos a trabalhar, vamos nos conectar a nossa DataBase usando a ferramenta gráfica. Para isso, acesse o menu “DataBase” e clique na opção “Connect to Database...”. Use as configurações padrão vistas na <strong><em>Figura 7</em></strong>.
@@ -118,21 +119,21 @@ Para começarmos a trabalhar, vamos nos conectar a nossa DataBase usando a ferra
 <p align="center">
   <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/d9921289-670c-41bc-84b6-ce4959cdd6bd" alt="Descrição da imagem">
 </p>
-<p align="center" style="font-size: 18px; margin: 10px;">Figura 6Figura 6. Acessando o menu “Database”.</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 6. Acessando o menu “Database”.</p>
 <p align="center">
   <img width="600" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/f41c4c7e-7555-4772-87a8-31fe0bfff7da" alt="Descrição da imagem">
 </p>
-<p align="center" style="font-size: 18px; margin: 10px;">Figura 7Figura 7. Configurações. </p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 7. Configurações. </p>
 
 
 **Linguagem de Definição de Dados (DDL)**<p></p>
  
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
-Ao criarmos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) <strong><em>chave</em></strong> (s) <strong><em>primária</em></strong> (s) e <strong><em>estrangeiras</em></strong>, <strong><em>índices</em></strong>, <strong><em>regras</em></strong> e etc.
+Ao criarmos banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) <strong><em>chave</em></strong> (s) <strong><em>primária</em></strong> (s) e <strong><em>estrangeiras</em></strong>, <strong><em>índices</em></strong>, <strong><em>regras</em></strong> e etc.
 Para isso, a criação e alteração de estruturas definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos nos referindo a comandos do tipo <strong><em>CREATE</em></strong>, <strong><em>ALTER</em></strong> e <strong><em>DROP</em></strong> (criar, alterar e excluir, respectivamente). <p></p>
 </div>
 
-Para criar o banco de dados DBDevMedia utilizaremos a sintaxe CREATE, conforme o código a seguir:
+Para criar o banco de dados **DBDevMedia** utilizaremos a sintaxe **CREATE**, conforme o código a seguir:
 ```c
 1| CREATE DATABASE DBDevMedia;
 ```
@@ -145,12 +146,9 @@ Para criar o banco de dados DBDevMedia utilizaremos a sintaxe CREATE, conforme o
 <p align="center">
 
  <div style="text-align: justify; font-size: 18px; margin: 10px;">
-Ao criarmos nosso banco de dados com as tabelas explicitando seus tipos de dados a cada campo, sua(s) <strong><em>chave</em></strong> (s) <strong><em>primária</em></strong> (s) e <strong><em>estrangeiras</em></strong>, <strong><em>índices</em></strong>, <strong><em>regras</em></strong> e etc.
-Para isso, a criação e alteração de estruturas definem como os dados serão armazenados. Logo, quando falamos de comando do tipo DDL estamos nos referindo a comandos do tipo <strong><em>CREATE</em></strong>, <strong><em>ALTER</em></strong> e <strong><em>DROP</em></strong> (criar, alterar e excluir, respectivamente). <p></p>
+Podemos complementar o nosso código com a sintaxe opcional <strong><em>IF NOT EXISTS</em></strong>, que permite ao  <strong><em>MySQL</em></strong>verificar <strong><em>se o nome escolhido esteja sendo utilizando no servidor</em></strong>, evitando que retorne um erro com a possível existência de dois bancos com o mesmo nome em um mesmo <strong><em>servidor MySQL:</em></strong> <p></p>
 </div>
 
-
-Podemos complementar o nosso código com a sintaxe opcional <strong><em>IF NOT EXISTS</em></strong>, que permite ao  <strong><em>MySQL</em></strong>verificar <strong><em>se o nome escolhido esteja sendo utilizando no servidor</em></strong>, evitando que retorne um erro com a possível existência de dois bancos com o mesmo nome em um mesmo <strong><em>servidor MySQL:</em></strong>
 ```C
 1| CREATE DATABASE IF NOT EXISTS DBDevMedia;
 ```
@@ -175,31 +173,53 @@ DROP DATABASE DBDevMedia;
 
 **Criando tabelas no MySQL**
 
-###parei aqui - pag: 08 ###
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Dada a grande quantidade de parâmetros aceitos, a declaração <strong><em>CREATE TABLE</em></strong> é uma das mais complexas no <strong><em>MySQL</em></strong>.
+Selecione o banco de dados que ganhará a nova tabela usando a sintaxe: <p></p>
+</div>
 
-Dada a grande quantidade de parâmetros aceitos, a declaração CREATE TABLE é uma das mais complexas no MySQL.
-Vamos começar selecionando o banco de dados que ganhará a nova tabela usando a sintaxe:
+```C
 USE DBDevMedia;
-De acordo com a documentação disponível pela Oracle, a sintaxe simplificada seria:
+```
+De acordo com a documentação disponível pela **Oracle**, a sintaxe simplificada seria:
+```C
 CREATE [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
 (create_definition, ...)
+```
 A parte de declaração que se encontra entre colchetes é opcional:
-•	TEMPORARY: Indica que a tabela criada será temporária, ou seja, ela expira assim que sua sessão no MySQL terminar. Use-a sempre que estiver fazendo testes.
-•	IF NOT EXISTS: Verifica a prévia existência da tabela e evita uma interrupção do script causada por erro. Como o MySQL é case sensitive, tabelas com nomes iguais, mas usando letras em caixa alta, como em tbl_name e Tbl_name, são consideradas tabelas totalmente diferentes.
-Uma tabela é composta por uma ou mais colunas, cada qual com suas definições.
-Vamos começar pela criação de uma agenda telefônica. A tabela contatos terá a seguinte estrutura da Listagem 1.
+• **TEMPORARY**: Indica que a tabela criada será temporária, ou seja, ela expira assim que sua sessão no MySQL terminar. Use-a sempre que estiver fazendo testes.
+• **IF NOT EXISTS**: Verifica a prévia existência da tabela e evita uma interrupção do script causada por erro. Como o **MySQL** é case sensitive, tabelas com nomes iguais, mas usando letras em caixa alta, como em **tbl_name** e **Tbl_name**, são consideradas tabelas totalmente diferentes.
+
+>Uma tabela é composta por uma ou mais colunas, cada qual com suas definições.
+
+Criando uma agenda telefônica. A tabela contatos terá a seguinte estrutura da Listagem 1.
+
+```C
 Listagem 1. Tabela Contatos
 CREATE TABLE contatos (
         nome VARCHAR(50) NOT NULL,
         telefone VARCHAR(25) NOT NULL
         );
-Para verificar se a tabela foi criada use o comando (Figura 10):
+```
+Para verificar se a tabela foi criada use o comando:
+```C
 SHOW TABLES;
- Figura 10. Listando tabelas existentes.
-Podemos melhorar um pouco mais a tabela contatos, ao acrescentar mais alguns campos, como sobrenome dos contatos, DDD, data de nascimento e e-mail. Antes de criar uma nova tabela, com o mesmo nome, vamos remover a anterior usando o comando:
+```
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/874be11f-70f4-4c46-9cc1-f3f90fdb3455" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 10. Listando tabelas existentes.</p>
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Podemos melhorar um pouco mais a tabela contatos, ao acrescentar mais alguns campos, como sobrenome dos contatos, DDD, data de nascimento e e-mail. Antes de criar uma nova tabela, com o mesmo nome, vamos remover a anterior usando o comando: <p></p>
+</div>
+
+```C
 DROP TABLE contatos;
-Agora, vamos criar a nova tabela, conforme a Listagem 2.
-Listagem 2. Tabela contatos
+```
+Agora, vamos criar a nova tabela, conforme a **Listagem 2**.
+
+```C
 CREATE TABLE IF NOT EXISTS contatos (
 nome VARCHAR(20) NOT NULL,
 sobrenome VARCHAR(30) NOT NULL,
@@ -207,30 +227,67 @@ ddd INT(2) NOT NULL,
 telefone VARCHAR(9) NOT NULL,
 data_nasc DATE NULL,
 email VARCHAR(30) NULL);
-A chave primária é o que torna a linha ou o registro de uma tabela único. Geralmente, é utilizada uma sequência automática para a geração dessa chave para que ela não venha a se repetir. Em nosso caso, o nro_contato será único, com uma sequência numérica que identificará o registro.
-A cláusula auto_increment é utilizada para incrementar automaticamente o valor da chave primária. Por padrão, essa cláusula inicia com 1. Porém, se houver a necessidade de iniciar por outro valor, podemos fazer como no exemplo a seguir:
+```
+<p align="center" style="font-size: 18px; margin: 10px;">Listagem 2. Tabela contatos</p>
+
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+A chave primária é o que torna a linha ou o registro de uma tabela único. Geralmente, é utilizada uma sequência automática para a geração dessa chave para que ela não venha a se repetir. Nosso caso, o <strong><em>nro_contato</em></strong> será único, com uma sequência numérica que identificará o registro. <p></p>
+A cláusula <strong><em>>auto_increment</em></strong é utilizada para incrementar automaticamente o valor da chave primária. Por padrão, essa cláusula inicia com 1. Porém, se houver a necessidade de iniciar por outro valor, podemos fazer como no exemplo a seguir: <p></p>
+</div>
+
+```C
 CREATE TABLE contatos AUTO_INCREMENT=100;
-ALTER TABLE
-Imagine que sua tabela já contenha dados armazenados e você precisa acrescentar mais um campo (chamado Ativo) na tabela de contatos.
-Conhecidamente pensaríamos em usar o drop table para excluir a tabela e recriá-la com o novo campo, mas perder os dados é algo inviável.
-Nossa solução é utilizar a sintaxe ALTER TABLE, que permite alterar a estrutura da tabela existente. Por exemplo, você pode adicionar ou deletar colunas, criar ou remover índices, alterar o tipo de coluna existentes, ou renomear coluna ou tabelas. Você também pode alterar o comentário para a tabela e tipo de tabela.
-Para adicionar colunas use o comando ADD, seguido do nome e dos atributos da coluna que será adicionada e, da sua posição dentro da tabela com o auxílio do parâmetro AFTER. Assim, para adicionarmos a coluna ativo, usaremos o código a seguir:
+```
+
+**ALTER TABLE**
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Imagine que sua tabela já contenha dados armazenados e você precisa acrescentar mais um campo <strong><em>(chamado Ativo)</em></strong> na tabela de contatos.
+Conhecidamente pensaríamos em usar o <strong><em>drop table</em></strong> para excluir a tabela e recriá-la com o novo campo, mas perder os dados é algo inviável.
+A solução é utilizar a sintaxe <strong><em>ALTER TABLE</em></strong>, que permite alterar a estrutura da tabela existente. Por exemplo, você pode adicionar ou deletar colunas, criar ou remover índices, alterar o tipo de coluna existentes, ou renomear coluna ou tabelas. Você também pode alterar o comentário para a tabela e tipo de tabela.
+Para adicionar colunas use o comando <strong><em>ADD</em></strong>, seguido do nome e dos atributos da coluna que será adicionada e, da sua posição dentro da tabela com o auxílio do parâmetro <strong><em>AFTER</em></strong>. Assim, para adicionarmos a coluna ativo, usaremos o código a seguir: <p></p>
+</div>
+
+```C
 ALTER TABLE contatos
 ADD ativo SMALLINT NOT NULL AFTER email;
+```
+
 Para ver o resultado das alterações, dê o comando:
+
+```C
 DESCRIBE contatos;
-Para alterar os atributos e nome de colunas usamos o parâmetro CHANGE, seguido da denominação da coluna a ser alterada e dos novos atributos. Para mudar os atributos da coluna nome, utilizaremos a seguinte sintaxe:
+```
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para alterar os atributos e nome de colunas usamos o parâmetro <strong><em>CHANGE</em></strong>, seguido da denominação da coluna a ser alterada e dos novos atributos. Para mudar os atributos da coluna nome, utilizaremos a seguinte sintaxe: <p></p>
+</div>
+
+```C
 ALTER TABLE contatos
 CHANGE telefone telefone CHAR(9) NOT NULL;
-Vocês devem ter percebido que a palavra “telefone” foi utilizada duas vezes. Isso ocorre porque se indica primeiro a coluna e depois seus novos atributos, e o nome da coluna é um de seus atributos.
-Para mudar o nome da coluna e manter seus demais atributos usamos a sintaxe a seguir:
+```
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Percebe-se que a palavra <strong><em>"telefone"</em></strong>
+
+Vocês devem ter percebido que a palavra “telefone” foi utilizada duas vezes. Isso ocorre porque se indica primeiro a coluna e depois seus novos atributos, e o nome da coluna é um de seus atributos. Para mudar o nome da coluna e manter seus demais atributos usamos a sintaxe a seguir: <p></p>
+</div>
+
+```C
 ALTER TABLE contatos
 CHANGE telefone fone VARCHAR(9) NOT NULL;
-Linguagem de Manipulação de Dados (DML) e Linguagem de Transação de Dados (DTL)
-Inserindo registros
-Depois da tabela pronta precisamos agora de registros em nosso banco de dados. Para esse exemplo não vamos usar nenhuma aplicação para inserir esses dados, mas sim diretamente pelo SGBD através de comando SQL.
-Vamos fazer o primeiro INSERT na tabela contatos com o comando INSERT INTO contatos. Entre parênteses informaremos em quais colunas queremos inserir os registros e depois devemos informar qual o valor para cada coluna, como mostra a Listagem 3.
-Listagem 3. Inserindo dados
+```
+
+**Linguagem de Manipulação de Dados (DML) e Linguagem de Transação de Dados (DTL)**
+>Inserindo registros
+
+Com as tabela pronta precisamos agora de registros em nosso banco de dados, neste caso diretamente <strong><em>SGBD</em></strong> através de comando SQL.
+Vamos fazer o primeiro <strong><em>INSERT</em></strong> na tabela contatos com o comando <strong><em>INSERT INTO</em></strong> contatos. Entre parênteses informaremos em quais colunas queremos inserir os registros e depois devemos informar qual o valor para cada coluna.
+
+
+```C
 INSERT INTO contatos (nome
 ,sobrenome
 ,ddd
@@ -245,8 +302,11 @@ VALUES(‘Bruno’
 ,‘2015-08-22’
 ,‘contato@dominio.com.br’
 ,1);
-Se você quiser inserir em todos os campos da tabela, não é necessário descrever quais serão populados. Apenas não se esqueça de conferir se os valores estão na sequência correta, como na Listagem 4, onde omitimos estes campos. O SGBD subentende que todos os campos serão populados.
-Listagem 4. Inserindo dados sem descrever
+```
+
+Pode inserir em todos os campos da tabela, não é necessário descrever quais serão populados, apenas não se esquecer de conferir se os valores estão na sequência correta, como podemos ver na <strong><em>"Listagem 04"</em></strong> onde omitimos estes campos. O <strong><em>SGBD</em></strong> subentende que todos os campos serão populados.
+
+```C
 INSERT INTO contatos VALUES(‘Bruno’
 ,‘Santos’
 ,11
@@ -254,23 +314,42 @@ INSERT INTO contatos VALUES(‘Bruno’
 ,‘2015-08-22’
 ,‘contato@dominio.com.br’
 ,1);
-Observe que em nenhum momento foi mencionado o campo nro_contato ou acrescentado um valor diretamente, isso por que este campo foi definido como auto_increment, desta forma, o campo recebe o valor automaticamente.
-Alterando registros
-Para alterar os registros usamos o comando UPDATE.
-No exemplo anterior inserimos um sobrenome errado. Para corrigir usamos a sintaxe da Listagem 5.
-Listagem 5. Alterando dados
+```
+<p align="center" style="font-size: 18px; margin: 10px;">Listagem 4. Inserindo dados sem descrever</p>
+
+Podemos obserrvar que em nenhum momento foi mencionado o campo <strong><em>"nro_contato 04"</em></strong> ou acrescentado um valor diretamente, isso por que este campo foi definido como <strong><em>auto_increment</em></strong>, desta forma, o campo recebe o valor automaticamente.
+
+**Alterando registros** 
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para alterar os registros usamos o comando <strong><em>UPDATE</em></strong>.
+No exemplo anterior inserimos um sobrenome errado. Para corrigir usamos a sintaxe da Listagem 5. <p></p>
+</div>
+
+```C
 UPDATE contatos SET
 sobrenome= ‘Nascimento’ WHERE nro_contato= 100;
 commit;
+```
+<p align="center" style="font-size: 18px; margin: 10px;">Listagem 5. Alterando dados </p>
+
 Podemos atualizar mais de um campo de uma vez só, separando com “,”, como mostra a Listagem 6.
-Listagem 6. Alterando mais de um dado
+
+```C
 UPDATE contatos SET
 sobrenome= ‘Nascimento’
 , ddd= 015
 , telefone= ‘0123456789’
 WHERE nro_contato = 100
 commit;
-Perceba que, além do UPDATE utilizamos o SET para informar qual campo que queremos alterar. O WHERE indica a condição para fazer a alteração e, em seguida, o commit diz ao SGBD que ele pode realmente salvar a alteração do registro. Se, por engano, fizermos o UPDATE incorreto, antes do commit podemos reverter a situação usando a instrução SQL rollback, da seguinte e maneira:
+```
+<p align="center" style="font-size: 18px; margin: 10px;">Listagem 6. Alterando mais de um dado</p>
+
+Note que, além do UPDATE utilizamos o <strong><em>SET</em></strong> para informar qual campo que queremos alterar. O <strong><em>WHERE</em></strong> indica a condição para fazer a alteração e, em seguida, o commit diz ao SGBD que ele pode realmente salvar a alteração do registro. Se, por engano, fizermos o <strong><em>UPDATE</em></strong> incorreto, antes do <strong><em>commit</em></strong> podemos reverter a situação usando a instrução <strong><em>SQL rollback</em></strong>, da seguinte e maneira:
+
+parei aqui
+
+
 UPDATE contatos SET
 sobrenome= ‘Nascimento’ WHERE nro_contato= 100;
 rollback;
