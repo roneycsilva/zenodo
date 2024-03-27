@@ -345,132 +345,265 @@ commit;
 ```
 <p align="center" style="font-size: 18px; margin: 10px;">Listagem 6. Alterando mais de um dado</p>
 
-Note que, além do UPDATE utilizamos o <strong><em>SET</em></strong> para informar qual campo que queremos alterar. O <strong><em>WHERE</em></strong> indica a condição para fazer a alteração e, em seguida, o commit diz ao SGBD que ele pode realmente salvar a alteração do registro. Se, por engano, fizermos o <strong><em>UPDATE</em></strong> incorreto, antes do <strong><em>commit</em></strong> podemos reverter a situação usando a instrução <strong><em>SQL rollback</em></strong>, da seguinte e maneira:
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Note que, além do UPDATE utilizamos o <strong><em>SET</em></strong> para informar qual campo que queremos alterar. O <strong><em>WHERE</em></strong> indica a condição para fazer a alteração e, em seguida, o commit diz ao SGBD que ele pode realmente salvar a alteração do registro. Se, por engano, fizermos o <strong><em>UPDATE</em></strong> incorreto, antes do <strong><em>commit</em></strong> podemos reverter a situação usando a instrução <strong><em>SQL rollback</em></strong>, da seguinte e maneira: <p></p>
+</div>
 
-parei aqui
-
-
+```C
 UPDATE contatos SET
 sobrenome= ‘Nascimento’ WHERE nro_contato= 100;
 rollback;
-Com isso, o nosso SGBD vai reverter a última instrução. Porém, se tiver a intenção de utilizar o rollback, faça-o antes de aplicar o commit, pois se você aplicar o UPDATE ou qualquer outro comando que necessite do commit, não será possível reverter.
-As instruções commit e rollback são tratadas pela Linguagem de Transação de Dados (DTL).
-Excluindo registros
-Para deletar algum registro usamos a instrução SQL DELETE. Diferente do DROP, ele deleta os registros das colunas do banco de dados.
-O DROP é usado para excluir objetos do banco, como tabelas, colunas, views e procedures, enquanto, o delete deletará os registros das tabelas, podendo excluir apenas uma linha ou todos os registros. Desta maneira, vamos apagar o primeiro registro da tabela contatos usando o seguinte comando:
+```
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Note que, além do UPDATE utilizamos o <strong><em>SET</em></strong> para informar qual campo que queremos alterar. O <strong><em>WHERE</em></strong> indica a condição para fazer a alteração e, em seguida, o commit diz ao SGBD que ele pode realmente salvar a alteração do registro. Se, por engano, fizermos o <strong><em>UPDATE</em></strong> incorreto, antes do <strong><em>commit</em></strong> podemos reverter a situação usando a instrução <strong><em>SQL rollback</em></strong>, da seguinte e maneira: <p></p>
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+O <strong><em>SGBD</em></strong> vai reverter a última instrução. Porém, se tiver a intenção de utilizar o <strong><em>rollback</em></strong>, faça-o antes de aplicar o <strong><em>commit</em></strong>, pois se você aplicar o <strong><em>UPDATE</em></strong> ou qualquer outro comando que necessite do <strong><em>commit</em></strong>, não será possível reverter.
+As instruções commit e <strong><em>rollback</em></strong> são tratadas pela <strong><em>Linguagem de Transação de Dados (DTL)</em></strong>. <p></p>
+	 
+**Excluindo registros**
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para deletar algum registo usamos a Instrução <strong><em>DELETE</em></strong> e <strong><em>DROP</em></strong>
+Explicação de cada uma:<p></p>
+
+. O DROP é usado para excluir objetos do banco, como tabelas, colunas, views e procedures <p></p>
+. O delete deletará os registros das tabelas, podendo excluir apenas uma linha ou todos os registros.<p></p>
+
+```C
 DELETE FROM contatos WHERE nro_contato= 100;
 commit;
+```
+
 Para deletar todos os registros da tabela de clientes usamos o comando:
+
+```C
 DELETE FROM contatos;
 commit;
-Observe que, ao empregar o DELETE você também deve usar o commit logo após a instrução. Da mesma maneira, podemos também utilizar o rollback para não efetivar uma exclusão de dados incorretos.
-Além do DELETE, podemos eliminar os dados usando a instrução SQL TRUNCATE, que não necessita de commit. Nem o rollback pode reverter à operação.
-Isso ocorre porque, quando você utiliza o DELETE, o SGBD salva os seus dados em uma tabela temporária e, quando aplicamos o rollback, ele a consulta e restaura os dados. Já o TRUNCATE não a utiliza, o SGBD faz a eliminação direta. Para usar esse comando utilizar a sintaxe a seguir:
+```
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Observe que, ao empregar o <strong><em>DELETE</em></strong> você também deve usar o <strong><em>commit</em></strong> logo após a instrução. Da mesma maneira, podemos também utilizar o <strong><em>rollback</em></strong> para não efetivar uma exclusão de dados incorretos.
+Além do <strong><em>DELETE</em></strong>, podemos eliminar os dados usando a instrução <strong><em>SQL TRUNCATE</em></strong>, que não necessita de <strong><em>commit</em></strong>. Nem o <strong><em>rollback</em></strong> pode reverter à operação.
+Isso ocorre porque, quando você utiliza o <strong><em>DELETE</em></strong>, o <strong><em>SGBD</em></strong> salva os seus dados em uma tabela temporária e, quando aplicamos o <strong><em>rollback</em></strong>, ele a consulta e restaura os dados. Já o <strong><em>TRUNCATE</em></strong> não a utiliza, o <strong><em>SGBD</em></strong> faz a eliminação direta. Para usar esse comando utilizar a sintaxe a seguir: <p></p>
+
+```C
 TRUNCATE TABLE contatos;
-Essa instrução não pode ser usada dentro da cláusula WHERE.
-Linguagem de Consulta de Dados (DQL)
-O objetivo de armazenar registros em um banco de dados é a possibilidade de recuperar e utilizá-los em relatórios para análises mais profundas. Essa recuperação é feita através de consultas.
-O comando SQL utilizado para fazer consultas é o SELECT. Selecionando os dados, devemos dizer ao SGBD de onde queremos selecionar, através do comando FROM.
-Como exemplo, vamos selecionar os registros da tabela de contato (Figura 11). Quando não queremos selecionar um ou vários campos específicos, utilizamos o asterisco (*):
+```
+
+>Essa instrução não pode ser usada dentro da cláusula **WHERE**.
+
+**Linguagem de Consulta de Dados (DQL)**
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+O objetivo de armazenar registros em um banco de dados é a possibilidade de recuperar e utilizá-los em relatórios para análises mais profundas. Essa recuperação é feita através de consultas. O comando <strong><em>SQL</em></strong>  utilizado para fazer consultas é o <strong><em>SELECT</em></strong>. Selecionando os dados, devemos dizer ao <strong><em>SGBD</em></strong> de onde queremos selecionar, através do comando <strong><em>FROM</em></strong>.
+Como exemplo, vamos selecionar os registros da tabela de contato. Quando não queremos selecionar um ou vários campos específicos, utilizamos o asterisco <strong><em>(*)</em></strong>: <p></p>
+
+```C
 SELECT * FROM contatos;
- Figura 11. Consultando contatos.
-Se quisermos selecionar os registros dos campos nome e sobrenome (Figura 12), usamos a sintaxe:
+```
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/4ee2492e-e0d1-46e6-8421-7cd82e0c5bc4" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 11. Consultando contatos.</p>
+
+ 
+Se quisermos selecionar os registros dos campos nome e sobrenome, usamos a sintaxe:
+
+```C
 SELECT nome, sobrenome FROM contatos;
- Figura 12. Consultando o nome e o sobrenome da tabela contatos.
-Ainda podem surgir situações que necessitem selecionar apenas um registro. Neste caso, utilizamos o WHERE
-Vamos selecionar o cliente com uma cláusula que deve ter nro_contato= 101:
+```
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/0de05b21-ca32-4129-8324-eb00b40ad17d" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;"> Figura 12. Consultando o nome e o sobrenome da tabela contatos.</p>
+
+Ainda podem surgir situações que necessitem selecionar apenas um registro. Neste caso, utilizamos o **WHERE**
+Vamos selecionar o cliente com uma cláusula que deve ter **nro_contato= 101**:
+
+```C
 SELECT nome, sobrenome
 FROM contatos
 WHERE nro_contato= 100;
+```
+
 Para colunas do tipo texto será necessário colocar o valor entre aspas simples, assim dizemos ao SGBD que estamos querendo comparar o valor com uma coluna do tipo texto:
+
+```C
 SELECT nome, sobrenome
 FROM contatos
 WHERE nome= ‘Bruno’;
-E se quiséssemos todos os clientes que sejam diferentes de ‘100’? Faríamos uma consulta utilizando o operador do MySQL diferente <> (Figura 13):
+```
+
+E se quiséssemos todos os clientes que sejam diferentes de **‘100’**? Faríamos uma consulta utilizando o operador do **MySQL** diferente **<>**:
+
+```C
 SELECT nome, sobrenome
 FROM contatos
 WHERE nro_contato<> 100;
- Figura 13. Utilizando a clausula “WHERE nro_contato <> 100”.
+```
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/42b28660-607e-4856-8e58-bee78df808f4" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 13. Utilizando a clausula “WHERE nro_contato <> 100”.</p>
+
+ 
 Além dos operadores de comparação = e <>, temos os seguintes operadores:
-•	>: maior;
-•	<: menor;
-•	>=: maior e igual;
-•	<=: menor e igual.
-A clausula DISTINCT retorna apenas uma linha de dados para todo o grupo de linhas que tenha o mesmo valor. Por exemplo, executando a consulta a seguir:
+• >: maior;
+• <: menor;
+• >=: maior e igual;
+• <=: menor e igual.
+
+A clausula **DISTINCT** retorna apenas uma linha de dados para todo o grupo de linhas que tenha o mesmo valor. Por exemplo, executando a consulta a seguir:
+
+```C
 SELECT DISTINCT sobrenome FROM contatos;
+```
 Os valores retornados são apenas três, pois Santos se repete duas vezes:
+
+```C
 Santos
 Carvalho
 Silva
-Já a clausula ALL é o oposto de DISTINCT, pois retorna todos os dados. Observe a consulta a seguir:
+```
+
+Já a clausula **ALL** é o oposto de **DISTINCT**, pois retorna todos os dados. Observe a consulta a seguir:
+
+```C
 SELECT ALL sobrenome FROM contatos;
+```
+
 Repare que o resultado a seguir apresenta o sobrenome Santos duas vezes:
+
+```C
 Santos
 Carvalho
 Santos
 Silva
-A clausula ORDER BY retorna os comandos em ordem ascendente (ASC) ou descendente (DESC), sendo o padrão ascendente. Vejamos um exemplo:
+```
+
+A clausula **ORDER BY** retorna os comandos em ordem **ascendente (ASC)** ou **descendente (DESC)**, sendo o padrão _ascendente_. 
+
+Vejamos um exemplo:
+
+```C
 SELECT nome FROM contatos ORDER BY nome DESC;
+```
 Repare que os nomes são retornados em ordem descrescente
+
+```C
 Isabelle
 Elaine
 Cauã
 Bruno
-A clausula LIMIT [inicio,] linhas retorna o número de linhas especificado. Se o valor inicio for fornecido, aquelas linhas são puladas antes do dado ser retornado. Lembre-se que a primeira linha é 0.
+```
+A clausula **LIMIT [inicio,]** linhas retorna o número de linhas especificado. Se o valor inicio for fornecido, aquelas linhas são puladas antes do dado ser retornado. **Lembre-se que a primeira linha é 0**.
+
+```C
 SELECT * FROM contatos LIMIT 3,1;
+```
 O resultado da consulta será:
+
+```C
 103 Isabelle Silva 11 999999999 2013-11-20 contato@rh.com.br
+```
 Para incrementar as consultas podemos usar algumas funções. A seguir apresentaremos as mais comuns:
-•	A função ABS retorna o valor absoluto do número, ou seja, só considera a parte numérica, não se importando com o sinal de positivo ou negativo do mesmo. Por exemplo: ABS(-145) retorna 145;
-•	A função BIN considera o binário de número decimal. Por exemplo: BIN(8) retorna 1000;
-•	A função CURDATE() / CURRENTDATE() retorna a data atual na forma YYYY/MM/DD. Por exemplo: CURDATE() retorna 2002/04/04;
-•	A função CURTIME() / CURRENTTIME() retorna a hora atual na forma HH:MM:SS. Por exemplo: CURTIME() retorna 13:02:43;
-•	A função DATABASE retorna o ome do banco de dados atual: Por exemplo: DATABASE() retorna DBDevMedia;
-•	A função DAYOFMONTH retorna o dia do mês para a data dada, na faixa de 1 a 31. Por exemplo: DAYOFMONTH("2004-04-04") retorna 04;
-•	A função DAYNAME retorna o dia da semana para a data dada. Por exemplo: DAYNAME("2004-04-04") retorna Sunday;
-•	A função DAYOFWEEK retorna o dia da semana em número para a data dada, na faixa de 1 a 7, onde o 1 é domingo. Por exemplo: DAYOFWEEK("2004-04-04") retorna 1;
-•	A função DAYOFYEAR retorna o dia do ano para a data dada, na faixa de 1 até 366. Por exemplo: DAYOFYEAR("2004-04-04") retorna 95;
-•	A função FORMAT(NÚMERO, DECIMAIS) formata o número nitidamente com o número de decimais dado. Por exemplo: FORMAT(5543.00245,2) retorna 5.543.002,45
-A função LIKE merece um destaque especial, pois faz uma busca sofisticada por uma substring dentro de uma string informada. Temos, dentro da função LIKE, os seguintes caracteres especiais utilizados em substrings:
-•	%: busca zero ou mais caracteres;
-•	_: busca somente um caractere.
-Vamos a alguns exemplos:
+
+• A função ABS retorna o valor absoluto do número, ou seja, só considera a parte numérica, não se importando com o sinal de positivo ou negativo do mesmo. Por exemplo: **ABS(-145) retorna 145**;<p></p>
+• A função **BIN** considera o binário de número decimal. Por exemplo: **BIN(8) retorna 1000;**<p></p>
+• A função **CURDATE() / CURRENTDATE()** retorna a data atual na forma **YYYY/MM/DD**. Por exemplo: **CURDATE() retorna 2002/04/04**;<p></p>
+• A função **CURTIME() / CURRENTTIME()** retorna a hora atual na forma **HH:MM:SS**. Por exemplo: **CURTIME() retorna 13:02:43**;<p></p>
+• A função **DATABASE** retorna o ome do **banco de dados atual**: Por exemplo: **DATABASE() retorna DBDevMedia**;<p></p>
+• A função **DAYOFMONTH** retorna o **dia do mês para a data dada**, na **faixa de 1 a 31**. Por exemplo: **DAYOFMONTH("2004-04-04") retorna 04**;<p></p>
+• A função **DAYNAME** retorna o **dia da semana para a data dada**. Por exemplo: **DAYNAME("2004-04-04") retorna Sunday**;<p></p>
+• A função **DAYOFWEEK** retorna o **dia da semana em número para a data dada**, na **faixa de 1 a 7**, onde o **1 é domingo**. Por exemplo: **DAYOFWEEK("2004-04-04") retorna 1;**<p></p>
+• A função **DAYOFYEAR** retorna o **dia do ano para a data dada**, na faixa de **1 até 366**. Por exemplo: **DAYOFYEAR("2004-04-04") retorna 95**;<p></p>
+• A função **FORMAT(NÚMERO, DECIMAIS)** formata o número nitidamente com o número de decimais dado. Por exemplo: **FORMAT(5543.00245,2) retorna 5.543.002,45**<p></p>
+
+A função **LIKE** merece um destaque especial, pois faz uma busca **sofisticada** por uma **substring** dentro de uma **string informada**. Temos, dentro da função **LIKE**, os seguintes caracteres especiais utilizados em substrings:
+
+• %: busca zero ou mais caracteres;<p></p>
+•_: busca somente um caractere.<p></p>
+
+Vamos a alguns exemplos:<p></p>
+```C
 SELECT nome From contatos Where nome like ‘B%’;
+```
 O caractere ‘%’ nessa consulta indica que estamos procurando nomes que possuem a inicial B, ou seja, com base na nossa tabela contatos, o retorno será apenasBruno.
+```C
 SELECT nome From contato Where nome like ‘_a%’;
+```
+
 O caractere ‘_’ na consulta indica que estamos procurando nomes nos quais a letra A é a segunda letra do nome, ou seja, o retorno será apenas Cauã.
+```C
 SELECT nome From contato Where nome like ‘%o’;
+```
+
 A consulta buscou nomes em que a última letra é o caractere ‘O’, ou seja, teremos como retorno apenas Bruno.
 Outra função importante para retorno de consultas é Left, que retorna os primeiros caracteres à esquerda de uma string. Sua sintaxe é apresentada a seguir:
+```C
 LEFT(string,tamanho)
+```
 A consulta a seguir retornará os três primeiros caracteres à esquerda dos registros da coluna nome:
+```C
 SELECT LEFT(nome,3) from contatos
+```
 O resultado será:
+```C
 Bru
 Ela
 Cau
 Isa
-A função Right é semelhante a função Left, mas esta retorna os últimos caracteres à direita de uma string. Sua sintaxe também é semelhante:
-RIGHT(string1,tamanho)
-Repare que na consulta a seguir são retornados os quatro últimos caracteres à direita dos nomes da tabela contatos:
-SELECT RIGHT(nome,4) From contatos;
+```
+
+A função **Right** é semelhante a função **Left**, mas esta retorna os **últimos caracteres à direita de uma string**. Sua sintaxe também é semelhante:
 O resultado será:
+```C
+RIGHT(string1,tamanho)
+```
+
+Repare que na consulta a seguir **são retornados os quatro últimos caracteres à direita dos nomes da tabela contatos**:
+```C
+SELECT RIGHT(nome,4) From contatos;
+```
+O resultado será:
+```C
 runo
 aine
 Cauã
 ele
-Referencia:
-https://dev.mysql.com/doc/refman/8.0/en/
-https://dev.mysql.com/downloads/mysql/
-https://www.devmedia.com.br/mysql-tutorial/33309
+```
 
-Python
->História 
+## **Referencia:** ##
+
+MySQL [MySQL](https://dev.mysql.com/doc/refman/8.0/en/).<p></p> 
+Dowload MySQL [Dowload MySQL](https://dev.mysql.com/downloads/mysql/).<p></p> 
+DevMedia [DevMedia](https://www.devmedia.com.br/mysql-tutorial/33309).<p></p> 
+
+
+## **Python**##
+>História
+
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 Python é uma linguagem de programação de alto nível, interpretada e de propósito geral, criada por Guido van Rossum e lançada pela primeira vez em 1991. Desde então, Python experimentou um crescimento fenomenal e se tornou uma das linguagens mais populares e influentes no mundo da computação.
 Nos primeiros anos, Python ganhou destaque principalmente por sua sintaxe simples e legibilidade, tornando-o acessível para programadores iniciantes e experientes. Sua filosofia de design, enfatizada pelo "Zen do Python", promove a legibilidade do código e a simplicidade.
 Ao longo dos anos, Python evoluiu constantemente, com o lançamento de novas versões que introduziram recursos poderosos e melhorias de desempenho. O lançamento da versão 2.0 em 2000 foi um marco significativo, mas eventualmente, em 2008, o desenvolvimento se concentrou na versão 3.x, que trouxe uma série de melhorias substanciais e correções de design.
 Python é amplamente utilizado em uma variedade de domínios, desde desenvolvimento web e automação de sistemas até ciência de dados e inteligência artificial. Sua flexibilidade e extensa biblioteca padrão tornam-no uma escolha popular para uma variedade de tarefas de programação.
 Nos dias de hoje, Python continua a crescer em popularidade. Grandes empresas como Google, Facebook, Amazon e Microsoft utilizam Python em suas infraestruturas e desenvolvimento de software. Além disso, comunidades de desenvolvedores em todo o mundo contribuem ativamente para o ecossistema Python, criando bibliotecas, frameworks e ferramentas que estendem ainda mais sua funcionalidade e usabilidade.
+ <p></p>
+
+<p align="center">
+  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/4ee2492e-e0d1-46e6-8421-7cd82e0c5bc4" alt="Descrição da imagem">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 11. Consultando contatos.</p>
+
+
+
+
+P
 
 Instalação do ambiente Python
 O ambiente Python (linguagem, interpretador, módulos e ferramentas) é super simples de se instalar, em caso de sistema operacional (SO) Linux, a maioria das distribuições já vem com Python instalado, porque 17vários scripts do SO já são executados em Python. 
