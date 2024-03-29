@@ -1,14 +1,21 @@
 ## **Integração do Banco de Dados MySQL e linguagem Python.** ##
+>Introdução
+
+Este trabalho oferece uma visão abrangente sobre o MySQL, um sistema de gerenciamento de banco de dados relacional de código aberto amplamente utilizado em aplicações web. Desde sua criação em 1995, o MySQL tem sido uma escolha popular entre os desenvolvedores devido à sua confiabilidade, desempenho e flexibilidade. Capaz de lidar com grandes volumes de dados e oferecer acesso rápido, o MySQL tornou-se fundamental para muitos sistemas dinâmicos na web. Além disso, o texto aborda a linguagem de programação Python, escolhida por sua simplicidade, vasta biblioteca padrão e comunidade ativa, Python é amplamente adotada em diferentes setores da indústria.
+Por fim, o texto destaca a integração entre MySQL e Python usando o MySQL Connector/Python. Este conector proporciona uma integração direta e eficiente entre as duas tecnologias, garantindo desempenho otimizado e segurança nos dados. Com uma API amigável, facilita a execução de consultas e atualizações no banco de dados. Mantido ativamente pela comunidade, o MySQL Connector/Python é compatível com várias versões do MySQL, tornando-se uma escolha confiável para o desenvolvimento de aplicativos robustos.
+
 >Pesquisa
 
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
 <p> 
   Um banco de dados é uma coleção organizada de dados estruturados que são armazenados eletronicamente em um sistema de computador. Ele é projetado para permitir o armazenamento, recuperação, manipulação e gerenciamento eficiente desses dados, permitindo que usuários e aplicativos acessem e trabalhem com as informações de forma fácil e rápida.
 <p></p>
-	
+
+ 
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
 <p> 
- 1. Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.<p></p>
+	
+1. Armazenamento de Dados: Capacidade de armazenar grandes volumes de dados de forma estruturada, seguindo um modelo de dados específico.<p></p>
 2. Recuperação de Dados: Capacidade de recuperar dados de forma eficiente por meio de consultas, permitindo que os usuários obtenham informações específicas conforme necessário.<p></p>
 3. Gerenciamento de Transações**: Suporte para transações que garantem a integridade e consistência dos dados, permitindo operações como inserção, atualização e exclusão de registros.<p></p>
 4. Concorrência: Habilidade de lidar com múltiplos usuários acessando e manipulando os dados simultaneamente de forma segura e eficiente.<p></p>
@@ -445,7 +452,7 @@ WHERE nro_contato<> 100;
 ```
 
 <p align="center">
-  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/42b28660-607e-4856-8e58-bee78df808f4" alt="Descrição da imagem">
+  <img width="550" height="320" src="https://github.com/roneycsilva/zenodo/assets/61150519/42b28660-607e-4856-8e58-bee78df808f4" alt="Descrição da imagem">
 </p>
 <p align="center" style="font-size: 18px; margin: 10px;">Figura 13. Utilizando a clausula “WHERE nro_contato <> 100”.</p>
 
@@ -575,17 +582,8 @@ aine
 Cauã
 ele
 ```
-
-## **Referencia:** ##
-
-MySQL [MySQL](https://dev.mysql.com/doc/refman/8.0/en/).<p></p> 
-Dowload MySQL [Dowload MySQL](https://dev.mysql.com/downloads/mysql/).<p></p> 
-DevMedia [DevMedia](https://www.devmedia.com.br/mysql-tutorial/33309).<p></p> 
-
-
 ## **Python**##
 >História
-
 
 <div style="text-align: justify; font-size: 18px; margin: 10px;">
 Python é uma linguagem de programação de alto nível, interpretada e de propósito geral, criada por Guido van Rossum e lançada pela primeira vez em 1991. Desde então, Python experimentou um crescimento fenomenal e se tornou uma das linguagens mais populares e influentes no mundo da computação.
@@ -595,67 +593,117 @@ Python é amplamente utilizado em uma variedade de domínios, desde desenvolvime
 Nos dias de hoje, Python continua a crescer em popularidade. Grandes empresas como Google, Facebook, Amazon e Microsoft utilizam Python em suas infraestruturas e desenvolvimento de software. Além disso, comunidades de desenvolvedores em todo o mundo contribuem ativamente para o ecossistema Python, criando bibliotecas, frameworks e ferramentas que estendem ainda mais sua funcionalidade e usabilidade.
  <p></p>
 
-<p align="center">
-  <img width="550" height="400" src="https://github.com/roneycsilva/zenodo/assets/61150519/4ee2492e-e0d1-46e6-8421-7cd82e0c5bc4" alt="Descrição da imagem">
-</p>
-<p align="center" style="font-size: 18px; margin: 10px;">Figura 11. Consultando contatos.</p>
-
-
-
-
-P
-
-Instalação do ambiente Python
+## **Instalação do ambiente Python** ##
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 O ambiente Python (linguagem, interpretador, módulos e ferramentas) é super simples de se instalar, em caso de sistema operacional (SO) Linux, a maioria das distribuições já vem com Python instalado, porque 17vários scripts do SO já são executados em Python. 
 Para verificar se já está instalado no Linux ou Windows, abra a console de comandos do sistema operacional e digite o comando python --version. que apresenta o resultado do comando.
+ <p></p>
 
- 
-Figura 9 Verifica instalação da linguagem Python.
+<p align="center">
+  <img width="500" height="190" src="https://github.com/roneycsilva/zenodo/assets/61150519/0623cae1-d545-448f-af16-9648a0867883">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 9 Verifica instalação da linguagem Python.</p>
 
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 No Linux, caso seja detectado que não há Python instalado, utilize o seu gerenciador de pacote preferido conforme comandos na Tabela 1 abaixo:
+ <p></p>
 
-Gerenciado de Pacote Linux	Comando	Oque esta Intalado
+| Gerenciado de Pacote Linux | Comando                            | Oque esta Intalado									 |
+| :---                       |     :---:                          |          :---     									 |
+| Apt-get                    | sudo apt-get install python3.8     | Python            									 |
+|                            | sudo apt-get install python-pip    | Gerenciador de módulos do Python. Serve para instalar extensões do Python.           |
+|   Yum                      | sudo yum install python38          | Python         									 |
+|                            | yum -y install python-pip          | Gerenciador de módulos do Python.    					         |
 
-
-Apt-get	sudo apt-get install python3.8	Python
-	sudo apt-get install python-pip	Gerenciador de módulos do Python. Serve para instalar extensões do Python.
-Yum	sudo yum install python38	Python
-	yum -y install python-pip	Gerenciador de módulos do Python.
-
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 No Windows, por padrão, não vem instalado, então você deve baixar o instalador e realizar a instalação no seu computador. O site oficial é  www.python.org.
- 
-Figura 10 Site oficial da linguagem Python.
+ <p></p>
 
-No website, acesse a aba “downloads” e baixe o instalador Python. Na ocasião de escrita deste material, a versão do momento é a Python 3.8.0. Se na época em que estiver lendo este livro, existir uma versão mais nova, não tem problema, todos os passos aqui ensinados se aplicarão.
- 
-Figura 11Local para baixar o instalador Python para Windows.
+<p align="center">
+  <img width="600" height="300" src="https://github.com/roneycsilva/zenodo/assets/61150519/5ac282e7-1039-48aa-addb-1446dd3c009f">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 10 Site oficial da linguagem Python.</p>
 
-Para instalar o Python 3.8 na sua máquina, basta executar o arquivo de instalação com dois cliques ou pressionar ENTER após selecioná-lo. Durante a instalação, siga o processo padrão do Windows, clicando em "Next" algumas vezes e depois em "Finish". Na primeira tela, certifique-se de marcar a opção "Add Python 3.8 to PATH" e clique em "Install Now" para concluir a instalação.
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+No website, acesse a aba “downloads” e baixe o instalador Python. Na ocasião de escrita deste material, a versão do momento é a Python 3.8.0. Se na época em que estiver lendo este livro, existir uma versão mais nova, não tem problema, todos os passos aqui ensinados se aplicarão. <p></p>
+	
+<p align="center">
+  <img width="600" height="300" src="https://github.com/roneycsilva/zenodo/assets/61150519/6dd7f7d2-4330-468b-adc4-4af9c5e8c3cd">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 11 Local para baixar o instalador Python para Windows.</p>
  
-Figura 12Primeira janela do instalador Python no Windows.
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para instalar o Python 3.8 na sua máquina, basta executar o arquivo de instalação com dois cliques ou pressionar ENTER após selecioná-lo. Durante a instalação, siga o processo padrão do Windows, clicando em "Next" algumas vezes e depois em "Finish". Na primeira tela, certifique-se de marcar a opção "Add Python 3.8 to PATH" e clique em "Install Now" para concluir a instalação.<p></p>
+	
+<p align="center">
+  <img width="600" height="300" src="https://github.com/roneycsilva/zenodo/assets/61150519/caf6aca3-e42e-4492-8735-40b8e91e5abb">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 12 Primeira janela do instalador Python no Windows.</p>
+
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
 Após clicar em "Install Now", o processo de instalação será iniciado. Esteja atento, pois como a instalação envolve a modificação de arquivos do sistema, o Windows pode solicitar sua confirmação para prosseguir. Certifique-se de responder "Sim" quando essa pergunta surgir.
- 
-Figura 13Janela de progresso de instalação da linguagem Python.
-Ao fim do processo, aparece uma janela informando que a instalação foi concluída com sucesso. Clique agora em close para fechar a janela.
- 
-Figura 14Janela que informa o sucesso da instalação no Windows.
-Depois da instalação, executar teste para verificar se tudo foi instalado correto. No Windows ir em programas instalados e localizar a pasta Python 3.8. Execute o aplicativo IDLE conforme a imagem abaixo.
- 
-Figura 15Como iniciar a interface de programação IDLE.
-O IDLE é um ambiente de desenvolvimento integrado para Python, que é lançado em cada liberação da ferramenta desde a versão 2.3. Na nossa opinião, não é a melhor ferramenta para se programar, mas para aprender programação é excelente.
- 
-Figura 16 O ambiente IDLE.
-Para desenvolvedores que estejam em um estágio avançado de conhecimento da linguagem em Python, pode ser utilizado o ambiente Pycharm da JetBrains. Um ambiente mais produtivo contendo excelentes facilidade de depuração de código.
- 
-Figura 17 Tela inicial do Pycharm.
+<p></p>
+	
+<p align="center">
+  <img width="600" height="300" src="https://github.com/roneycsilva/zenodo/assets/61150519/08200100-1c89-4b83-8016-4824cb567b76">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 13 Janela de progresso de instalação da linguagem Python.</p>
 
-Depois de instalar o Python, é hora de vermos o primeiro programa funcionando, neste caso usaremos o tradicional "Hello World. 
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Ao fim do processo, aparece uma janela informando que a instalação foi concluída com sucesso. Clique agora em close para fechar a janela.<p></p>
+	
+<p align="center">
+  <img width="600" height="300" src="https://github.com/roneycsilva/zenodo/assets/61150519/66dc2e66-1f96-4900-9826-367fe7688266">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 14 Janela que informa o sucesso da instalação no Windows.</p>
  
-Figura 18Exemplo de programa “Hello World” no Python.
 
+<div style="text-align: justify; font-size: 18px; margin: 10px;">
+Depois da instalação, executar teste para verificar se tudo foi instalado correto. No Windows ir em programas instalados e localizar a pasta Python 3.8. Execute o aplicativo IDLE conforme a imagem abaixo.<p></p>
+	
+<p align="center">
+  <img width="600" height="330" src="https://github.com/roneycsilva/zenodo/assets/61150519/30564a7f-ca3e-46bf-bf2f-fc8a9d5b2671">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 15 Como iniciar a interface de programação IDLE.</p>
+ 
+ 
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+O IDLE é um ambiente de desenvolvimento integrado para Python, que é lançado em cada liberação da ferramenta desde a versão 2.3. Na nossa opinião, não é a melhor ferramenta para se programar, mas para aprender programação é excelente.<p></p>
+	
+<p align="center">
+  <img width="600" height="330" src="https://github.com/roneycsilva/zenodo/assets/61150519/6f685ef6-2b52-401e-86d0-39648a3e3333">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 16 O ambiente IDLE.</p>
+
+  <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Para desenvolvedores que estejam em um estágio avançado de conhecimento da linguagem em Python, pode ser utilizado o ambiente Pycharm da JetBrains. Um ambiente mais produtivo contendo excelentes facilidade de depuração de código.<p></p>
+	
+<p align="center">
+  <img width="600" height="330" src="https://github.com/roneycsilva/zenodo/assets/61150519/942e9d84-dfad-4272-be35-6057025566f1">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 17 Tela inicial do Pycharm.</p>
+
+   <div style="text-align: justify; font-size: 18px; margin: 10px;">
+Depois de instalar o Python, é hora de vermos o primeiro programa funcionando, neste caso usaremos o tradicional "Hello World. <p></p>
+	
+<p align="center">
+  <img width="600" height="330" src="https://github.com/roneycsilva/zenodo/assets/61150519/ce2f0df7-c183-4e18-9907-78fbc9bd2388">
+</p>
+<p align="center" style="font-size: 18px; margin: 10px;">Figura 18 Exemplo de programa “Hello World” no Python.</p>
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
 Quando executado o programa, foi utilizado o console da linguagem Python. asicamente, é um espaço onde digita comandos, pressiona ENTER e eles são executados imediatamente. 
-Para criar um módulo Python, “uma sequência de comandos em um arquivo”, basta clicar em "File", depois em "New File" iniciar a programação. Ao terminar de escrever o programa, basta pressionar a tecla F5, nomear o arquivo e observar o resultado do seu programa. É uma forma prática e simples de desenvolver seus próprios scripts em Python.
+Para criar um módulo Python, “uma sequência de comandos em um arquivo”, basta clicar em "File", depois em "New File" iniciar a programação. Ao terminar de escrever o programa, basta pressionar a tecla F5, nomear o arquivo e observar o resultado do seu programa. É uma forma prática e simples de desenvolver seus próprios scripts em Python.<p></p>
+ 
+
+
+
+
 
  
-Figura 19Local onde se criam arquivos Python na ferramenta IDLE.
 
+
+# **Referencias:** #
+MySQL [MySQL](https://dev.mysql.com/doc/refman/8.0/en/).<p></p> 
+Dowload MySQL [Dowload MySQL](https://dev.mysql.com/downloads/mysql/).<p></p> 
+DevMedia [DevMedia](https://www.devmedia.com.br/mysql-tutorial/33309).<p></p> 
