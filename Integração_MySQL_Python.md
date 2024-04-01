@@ -765,35 +765,60 @@ pip install mysql-connector-python
 Caso esteja enfrentando algum problema durante a instalação, verifique a versão e módulo tentando instalá-lo novamente. Dúvida verifique a tabela abaixo para instalar versão correta. 
 <p></p>
 
-| Conector MySQL Python | Versões do MySQL       | Versões Python        |
-| :---                  |     :---               |                  :--- |
-|8,0  		        | 8,0, 5,7, 5,6, 5,5     | 3,6, 3,5, 3,4, 2,7    |
-|2.2 		        | 5,7, 5,6, 5,5          | 3,5, 3,4, 2,7         |
+| Conector MySQL Python | Versões do MySQL     		 | Versões Python       	   |
+| 	:---            |     	:---             	 |        :--- 			   |
+|8,0  		        | 8,0, 5,7, 5,6, 5,5    	 | 3,6, 3,5, 3,4, 2,7  		   |
+|2.2 		        | 5,7, 5,6, 5,5        		 | 3,5, 3,4, 2,7        	   |
+|2.1 		        | 5,7, 5,6, 5,5        		 | 3,5, 3,4, 2,7, 2,6   	   |
+|2.0 		        | 5,7, 5,6, 5,5        		 | 3,5, 3,4, 2,7, 2,6   	   |
+|1.2		        | 5,7, 5,6, 5,5 (5,1, 5,0, 4,1)  | 3,4, 3,3, 3,2, 3,1, 2,7, 2,6    |
+
 
 
 <p align="center" style="font-size: 18px; margin: 10px;">Versões do conector Python MySQL</p>
 
-		
-		
-2.2	5,7, 5,6, 5,5	3,5, 3,4, 2,7
-2.1	5,7, 5,6, 5,5	3,5, 3,4, 2,7, 2,6
-2,0	5,7, 5,6, 5,5	3,5, 3,4, 2,7, 2,6
-1.2	5,7, 5,6, 5,5 (5,1, 5,0, 4,1)	3,4, 3,3, 3,2, 3,1, 2,7, 2,6
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+• Para evitar possíveis erros, insira no final a versão do mysql, instalado em usa máquina usando o comando pip install:
+	 
+```C
+mysql-connector-python==8.0.13
+``` 	 
+<p></p>
 
-•	Para evitar possíveis erros, insira no final a versão do mysql, instalado em usa máquina usando o comando pip install mysql-connector-python==8.0.13 .
-•	Se você estiver enfrentando um erro de falha na instalação do pip com connection error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:598).  Este erro pode ser resolvido ignorando o erro de SSL definindo pypi.org e files.pythonhosted.org como hosts confiáveis. 
+• Se você estiver enfrentando um erro de falha na instalação do pip com connection:  
+  
+```C
+error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:598)
+```  
+ Este erro pode ser resolvido ignorando o erro de SSL definindo pypi.org e files.pythonhosted.org como hosts confiáveis. <p></p>
+
+```C
 python -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org mysql-connector-python
-Após a instalação do MySQL Connector Python é executar o comando pip: - é apresentado seguintes mensagens:
-•	Coletando mysql-connector-python
-•	Baixando pacotes.
-•	Requisito já atendido: ferramentas de configuração em D:python\python37-32\lib\site-packages.
-•	Instalando pacotes coletados: mysql-connector-python
-•	MySQL-connector-python-8.0.13 instalado com sucesso
-Com o MySQL Connector Python instalado é necessário fazer o import da biblioteca para comunicação entre MySQL e Python
-from mysql.connector import connect
-A função connect() fornecida pelo módulo mysql.connector é essencial para estabelecer a comunicação entre o seu código e o banco de dados. Necessário fornecer alguns parâmetros importantes, como o nome do host onde o banco de dados está localizado, o nome de usuário e a senha para autenticação, além do nome do banco de dados que deseja acessar. 
-Aqui está um exemplo simples:
+```
+Após a instalação do MySQL Connector Python é executar o comando:
 
+```C
+pip: -
+```
+ Apresenta os seguintes mensagens:
+ 
+• Coletando ``` mysql-connector-python<p></p>```<p></p>
+• Baixando pacotes.<p></p>
+• Requisito já atendido: ferramentas de configuração em```D:python\python37-32\lib\site-packages```p></p>
+• Instalando pacotes coletados: ```mysql-connector-python```p></p>
+•  ```C MySQL-connector-python-8.0.13``` instalado com sucesso p></p>
+
+Com o **MySQL Connector Python** instalado é necessário fazer o import da biblioteca para comunicação entre MySQL e Python
+
+```C
+from mysql.connector import connect
+```
+
+A função connect() fornecida pelo módulo mysql.connector é essencial para estabelecer a comunicação entre o seu código e o banco de dados. Necessário fornecer alguns parâmetros importantes, como o nome do host onde o banco de dados está localizado, o nome de usuário e a senha para autenticação, além do nome do banco de dados que deseja acessar. 
+Aqui está um exemplo simples: 
+<p></p>
+	
+```C
 def mysql_connection(host, user, passwd, database=None):
     connection = connect(
         host = host,
@@ -802,45 +827,58 @@ def mysql_connection(host, user, passwd, database=None):
         database = database
     )
     return connection
+```
 
-Em seguida, é feita a chamada da função mysql_connection, que foi criada anteriormente, passando os parâmetros necessários.
+Em seguida, é feita a chamada da função **mysql_connection**, que foi criada anteriormente, passando os parâmetros necessários.
 
+```C
 connection = mysql_connection('localhost', 'root', 'mysql123')
-Estrutura de Dados MySQL e Python
 
+```
+
+
+**Estrutura de Dados MySQL e Python**
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
 A estrutura de dados MySQL com Python envolve a utilização da linguagem de programação Python para interagir com bancos de dados MySQL. Isso inclui a criação, manipulação e consulta de tabelas, além da execução de operações como inserção, atualização, exclusão e seleção de dados. 
 Para essa integração, podemos contar com bibliotecas como o MySQL Connector/Python, facilitando o desenvolvimento de aplicativos eficientes e robustos que fazem uso de bancos de dados relacionais.
 No processo de criação da estrutura de dados no MySQL com Python, o primeiro passo é criar uma nova base de dados. Isso é realizado através da execução de um comando SQL (CREATE DATABASE), armazenado em uma variável chamada query. 
 Em seguida, estabelecemos a conexão com o banco de dados e executamos o comando SQL utilizando um cursor. Essa abordagem nos permite automatizar o processo de criação da base de dados de forma eficaz e direta.
 O processo completo envolvendo a interação com um banco de dados MySQL pode ser dividido em várias etapas. Desde a criação da base de dados até o encerramento da conexão, cada passo desempenha um papel crucial no gerenciamento dos dados. 
-Abaixo está uma descrição detalhada de cada etapa:
+Abaixo está uma descrição detalhada de cada etapa:. 
+<p></p>
 
-1.	Criar a Base de Dados: antes de qualquer interação com o banco de dados, é necessário criar a base de dados. Isso pode ser feito através do MySQL Shell ou de uma interface de gerenciamento, como o phpMyAdmin. Durante este processo, é importante definir o nome da base de dados e, opcionalmente, especificar configurações adicionais, como o conjunto de caracteres e a codificação.
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+	 
+1. Criar a Base de Dados: antes de qualquer interação com o banco de dados, é necessário criar a base de dados. Isso pode ser feito através do MySQL Shell ou de uma interface de gerenciamento, como o phpMyAdmin. Durante este processo, é importante definir o nome da base de dados e, opcionalmente, especificar configurações adicionais, como o conjunto de caracteres e a codificação.<p></p>
 
-2.	Conectar à Biblioteca MySQL: para interagir com o banco de dados MySQL em um ambiente Python, é necessário utilizar uma biblioteca compatível, como `mysql-connector-python`. Essa biblioteca fornece métodos e classes para estabelecer conexões com o banco de dados, executar consultas e manipular resultados.
+2. Conectar à Biblioteca MySQL: para interagir com o banco de dados MySQL em um ambiente Python, é necessário utilizar uma biblioteca compatível, como `mysql-connector-python`. Essa biblioteca fornece métodos e classes para estabelecer conexões com o banco de dados, executar consultas e manipular resultados.<p></p>
 
-3.	Criar um Objeto Cursor: após estabelecer uma conexão com o banco de dados, um objeto cursor é criado. O cursor é essencial para executar comandos SQL e recuperar resultados de consultas. Ele atua como um ponto de controle para enviar comandos SQL para o banco de dados e receber os resultados de volta.
+3. Criar um Objeto Cursor: após estabelecer uma conexão com o banco de dados, um objeto cursor é criado. O cursor é essencial para executar comandos SQL e recuperar resultados de consultas. Ele atua como um ponto de controle para enviar comandos SQL para o banco de dados e receber os resultados de volta.<p></p>
 
-4.	Criar tabela: com a função query podemos criar a tabela de dados a variável query, vai receber um comando SQL (CREATE TABLE, para criação da tabela). Em seguida criamos uma variável chamada cursor, que vai estabelecer a conexão através da variável connection. Finalizamos com a variável cursor executando o comando SQL da variável query.
+4. Criar tabela: com a função query podemos criar a tabela de dados a variável query, vai receber um comando SQL (CREATE TABLE, para criação da tabela). Em seguida criamos uma variável chamada cursor, que vai estabelecer a conexão através da variável connection. Finalizamos com a variável cursor executando o comando SQL da variável query.<p></p>
 
-5.	Alimentar Dados: inserir novos registros na base de dados é uma tarefa comum. Isso pode ser feito através de comandos SQL de inserção, como `INSERT INTO`. Durante esse processo, os dados são adicionados às tabelas, seguindo a estrutura definida anteriormente.
+5. Alimentar Dados: inserir novos registros na base de dados é uma tarefa comum. Isso pode ser feito através de comandos SQL de inserção, como `INSERT INTO`. Durante esse processo, os dados são adicionados às tabelas, seguindo a estrutura definida anteriormente.<p></p>
 
-6.	Atualizar Dados: às vezes, é necessário modificar registros existentes na base de dados. Isso pode ser feito usando comandos SQL de atualização, como `UPDATE`. Os dados existentes são alterados de acordo com as condições especificadas na consulta.
+6. Atualizar Dados: às vezes, é necessário modificar registros existentes na base de dados. Isso pode ser feito usando comandos SQL de atualização, como `UPDATE`. Os dados existentes são alterados de acordo com as condições especificadas na consulta.<p></p>
 
-7.	Consultar Dados: recuperar informações específicas da base de dados é uma operação comum. Isso é feito através de consultas SQL, como `SELECT`, que retornam conjuntos de resultados que atendem aos critérios especificados.
+7. Consultar Dados: recuperar informações específicas da base de dados é uma operação comum. Isso é feito através de consultas SQL, como `SELECT`, que retornam conjuntos de resultados que atendem aos critérios especificados.<p></p>
 
-8.	Deletar Dados: para remover registros da base de dados, são utilizados comandos SQL de exclusão, como `DELETE FROM`. Isso elimina os registros que correspondem às condições especificadas na consulta.
+8. Deletar Dados: para remover registros da base de dados, são utilizados comandos SQL de exclusão, como `DELETE FROM`. Isso elimina os registros que correspondem às condições especificadas na consulta.<p></p>
 
-9.	Fechar a Conexão: após concluir todas as operações necessárias no banco de dados, é importante fechar a conexão para liberar recursos do sistema. Isso é feito chamando o método `close()` na conexão estabelecida.
+9. Fechar a Conexão: após concluir todas as operações necessárias no banco de dados, é importante fechar a conexão para liberar recursos do sistema. Isso é feito chamando o método `close()` na conexão estabelecida.<p></p>
+ 
+<p></p>
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
 
 Cada uma dessas etapas desempenha um papel fundamental na gestão eficaz dos dados em um ambiente MySQL, garantindo a integridade e a consistência das informações armazenadas.
-
-
-
-1.	Criar a Base de Dados 
+<strong><em>1. Criar a Base de Dados </em></strong><p></p>
 Para criar um banco de dados MySQL usando mysql.connector.connect(), primeiro você precisa ter o MySQL Server instalado e em execução. Em seguida, você pode usar essa função para se conectar ao servidor MySQL e executar uma instrução SQL para criar o banco de dados.
 Aqui está um exemplo simples:
+ <p></p>
 
+```C
 import mysql.connector
 
 conexao = mysql.connector.connect(
@@ -848,35 +886,46 @@ conexao = mysql.connector.connect(
     user="seu_usuario",
     password="sua_senha"
 )
-
 cursor = conexao.cursor()
 query = "CREATE DATABASE minha_base_de_dados"
 
 cursor.execute(query)
 cursor.close()
 conexao.close()
-
-2.	Conectar à Biblioteca MySQL
+```
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>2. Conectar à Biblioteca MySQL </em></strong><p></p>
 Para conectar-se à biblioteca MySQL em Python, instale o pacote mysql-connector-python e utilize a função connect(), fornecida por ela, passando os parâmetros necessários, como host, usuário, senha e nome do banco de dados. Assim, você estabelece a conexão para executar operações no banco de dados.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 conexao = mysql.connector.connect(
     host="localhost",
     user="seu_usuario",
     password="sua_senha",
     database="minha_base_de_dados"  # Adicionando o nome da base de dados
 )
+```
 
-3.	Criar um Objeto Cursor
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>3. Criar um Objeto Cursor</em></strong><p></p>
 Para criar um objeto Cursor em Python ao trabalhar com banco de dados, utilize o método cursor() na conexão estabelecida com o banco de dados. Este objeto Cursor permite executar consultas SQL e manipular os resultados retornados pelo banco de dados.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 cursor = conexao.cursor()
 
-4.	Criar tabela
+```
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>4. Criar tabela</em></strong><p></p>
 Para criar uma tabela em um banco de dados MySQL usando o conector MySQL em Python, você pode usar o objeto Cursor para executar uma instrução SQL CREATE TABLE. 
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 query = """
     CREATE TABLE minha_tabela (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -884,11 +933,15 @@ query = """
         idade INT
     )
 """
+```
 
-5.	Alimentar Dados
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>5. Alimentar Dados</em></strong><p></p>
 Para alimentar dados em uma tabela do banco de dados MySQL usando o conector MySQL em Python, você pode utilizar o objeto Cursor para executar instruções SQL de inserção (INSERT INTO). 
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 query = '''
     INSERT INTO minha_tabela VALUES
         (1001, 'Novo Nome 1', '1199999-9999', user1@email.com', São Paulo),
@@ -903,11 +956,15 @@ query = '''
 cursor = connection.cursor()
 cursor.execute(query)
 connection.commit()
+```
 
-6.	Atualizar Dados: 
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>6. Atualizar Dados: </em></strong><p></p>
 Para atualizar dados em uma tabela do banco de dados MySQL usando o conector MySQL em Python, você pode utilizar o método execute(). Isso pode ser feito usando comandos SQL de atualização, como `UPDATE`. Os dados existentes são alterados de acordo com as condições especificadas na consulta.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 import mysql.connector
 
 hostname = 'localhost'  # ou o endereço IP do seu servidor MySQL
@@ -941,10 +998,16 @@ finally:
         cursor.close()
         conn.close()
         print("Conexão ao Banco de Dados fechada.")
+```
 
-7.	Consultar Dados: recuperar informações específicas da base de dados é uma operação comum. Isso é feito através de consultas SQL, como `SELECT`, que retornam conjuntos de resultados que atendem aos critérios especificados.
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>7. Consultar Dados: </em></strong><p></p>
+Recuperar informações específicas da base de dados é uma operação comum. Isso é feito através de consultas SQL, como `SELECT`, que retornam conjuntos de resultados que atendem aos critérios especificados.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 import mysql.connector
 
 hostname = 'localhost'  # ou o endereço IP do seu servidor MySQL
@@ -982,10 +1045,15 @@ finally:
         cursor.close()
         conn.close()
         print("Conexão ao Banco de Dados fechada.")
+```
 
-8.	Deletar Dados: para remover registros da base de dados, são utilizados comandos SQL de exclusão, como `DELETE FROM`. Isso elimina os registros que correspondem às condições especificadas na consulta.
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>8. Deletar Dados: </em></strong><p></p>
+Para remover registros da base de dados, são utilizados comandos SQL de exclusão, como `DELETE FROM`. Isso elimina os registros que correspondem às condições especificadas na consulta.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 import mysql.connector
 
 hostname = 'localhost'  # ou o endereço IP do seu servidor MySQL
@@ -1019,10 +1087,15 @@ finally:
         cursor.close()
         conn.close()
         print("Conexão ao Banco de Dados fechada.")
+```
 
-9.	Fechar a Conexão: após concluir todas as operações necessárias no banco de dados, é importante fechar a conexão para liberar recursos do sistema. Isso é feito chamando o método `close()` na conexão estabelecida.
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>9. Fechar a Conexão: </em></strong><p></p>
+Após concluir todas as operações necessárias no banco de dados, é importante fechar a conexão para liberar recursos do sistema. Isso é feito chamando o método `close()` na conexão estabelecida.
 Aqui está um exemplo simples:
-
+ <p></p>
+ 
+```C
 import mysql.connector
 
 # Substitua os valores das variáveis abaixo com as informações do seu banco de dados
@@ -1057,7 +1130,10 @@ finally:
             print("Conexão ao Banco de Dados fechada com sucesso!")
     except Exception as e:
         print("Erro ao fechar a conexão:", e)
+```
 
+
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
 As considerações finais deste trabalho destacam a importância do MySQL como um sistema de gerenciamento de banco de dados relacional de código aberto amplamente utilizado em aplicações web. Desde sua criação em 1995, o MySQL tem sido valorizado por sua confiabilidade, desempenho e flexibilidade, tornando-se uma escolha fundamental para muitos sistemas dinâmicos na web. Sua capacidade de lidar com grandes volumes de dados e oferecer acesso rápido o tornou indispensável para diversos projetos.
 
 Além disso, o texto ressalta a linguagem de programação Python, escolhida por sua simplicidade, vasta biblioteca padrão e comunidade ativa. Python é amplamente adotada em diferentes setores da indústria devido a essas características.
@@ -1065,14 +1141,16 @@ Além disso, o texto ressalta a linguagem de programação Python, escolhida por
 Por fim, destaca-se a integração entre MySQL e Python através do MySQL Connector/Python. Este conector proporciona uma integração direta e eficiente entre as duas tecnologias, garantindo desempenho otimizado e segurança nos dados. Com uma API amigável, facilita a execução de consultas e atualizações no banco de dados. Sua manutenção ativa pela comunidade e compatibilidade com várias versões do MySQL o tornam uma escolha confiável para o desenvolvimento de aplicativos robustos.
 
 Em suma, o trabalho oferece uma visão abrangente sobre a combinação poderosa do MySQL e Python, destacando não apenas suas características individuais, mas também a forma como se complementam para criar soluções eficientes e seguras para diversas aplicações web.
+ <p></p>
 
 
- 
-
-
-### **Referencias:** ####
-MySQL [MySQL](https://dev.mysql.com/doc/refman/8.0/en/).<p></p> 
+ <div style="text-align: justify; font-size: 18px; margin: 10px;">
+<strong><em>Referencias: </em></strong><p></p>
+	 
+MySQL [MySQL](https://dev.mysql.com/doc/refman/8.0/en/).<p></p> 	 
 Dowload MySQL [Dowload MySQL](https://dev.mysql.com/downloads/mysql/).<p></p> 
 DevMedia [DevMedia](https://www.devmedia.com.br/mysql-tutorial/33309).<p></p> 
-https://dev.mysql.com/doc/connector-python/en/preface.html
-https://dadosaocubo.com/conectar-banco-de-dados-mysql-com-python/
+MySQL [Documento](https:dev.mysql.com/doc/connector-python/en/preface.htm).<p></p> 
+Dado ao Cubo [DadoaoCubo](https://dadosaocubo.com/conectar-banco-de-dados-mysql-com-python/).<p></p> 
+
+
